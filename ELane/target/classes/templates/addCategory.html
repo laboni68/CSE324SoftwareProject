@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<import resource="classpath:config/spring/that-other-xml-conf.xml"/>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+        background-color: #111;
+        }
+        li.dropdown {
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+    </style>
+
+    <style>
+        input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=password], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<ul>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Sign up</a>
+        <div class="dropdown-content">
+            <a href="/demo/signup">as customer</a>
+            <a href="/demo/signup_for_producer">as producer</a>
+
+        </div>
+    </li>
+    <li><a href="/demo/login">Login </a></li>
+
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">All Category</a>
+        <div class="dropdown-content">
+            <a href="/demo/cloths">cloths</a>
+            <a href="/demo/craft">craft</a>
+            <a href="/demo/food">food</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </li>
+
+</ul>
+
+<form method="post" action="/demo/addCategory">
+    <table>
+
+
+        <tr></tr>
+        <tr><td></td><td>ADD CATEGORY</td></tr>
+        <tr>
+            <td>Category Name </td>
+            <td><input type="text" name="cat_name"  /></td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" value="ADD"/>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+
+</html>
